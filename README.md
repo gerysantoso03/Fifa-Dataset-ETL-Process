@@ -371,6 +371,7 @@ finally:
 ```
 
 #### Check If The Data Successfully Stored Into Database
+```
 sql_query = """
     SELECT * FROM Fifa LIMIT 1;
 """
