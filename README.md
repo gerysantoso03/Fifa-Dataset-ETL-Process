@@ -273,6 +273,7 @@ fifa_df['Contract Category'] = fifa_df.apply(lambda row: create_contract_categor
 
 # Check if contract category successfully created
 display(fifa_df)
+```
 
 ### 12. Hits Column
 Hits column had null values, so i fill it with 0. I think 0 will suit to this case, because hits represent the value for each players and every players must have different hits value based on their performance. So if i fill null value with median or max value of the column, i think it will ruined all of the values and can lead into misscalculation and analysis. 
@@ -289,7 +290,9 @@ fifa_df.loc[fifa_df['Hits'].isnull(), 'Hits'] = 0
 
 # Re-check null value inside Hits column
 fifa_df['Hits'].isnull().sum()
+
 ```
+
 
 ### 13. Load Clean Dataset Into Database
 i used ```sqlite3``` library as the Database to store clean dataset that have been processed before.
